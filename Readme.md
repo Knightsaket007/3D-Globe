@@ -20,10 +20,7 @@ Welcome to the Earth3D project! This project is a 3D globe visualization built u
     ```sh
     git clone https://github.com/yourusername/Earth3D.git
     ```
-2. Navigate to the project directory:
-    ```sh
-    cd Earth3D
-    ```
+    
 3. Open `index.html` in your web browser to view the 3D globe.
 
 ## Usage
