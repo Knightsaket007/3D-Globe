@@ -1,7 +1,9 @@
 # Earth3D Project
 
 Welcome to the Earth3D project! This project is a 3D globe visualization built using HTML and JavaScript.
+## Project Status
 
+This project is currently in the building phase. Features and functionalities are being actively developed and may change frequently. Contributions and feedback are appreciated as we work towards the first stable release.
 ## Features
 
 - Interactive 3D globe
@@ -20,7 +22,7 @@ Welcome to the Earth3D project! This project is a 3D globe visualization built u
     ```sh
     git clone https://github.com/yourusername/Earth3D.git
     ```
-    
+
 3. Open `index.html` in your web browser to view the 3D globe.
 
 ## Usage
@@ -38,6 +40,6 @@ This project is licensed under the MIT License.
 
 ## Contact
 
-For any questions or suggestions, please open an issue or contact me at [your-email@example.com].
+For any questions or suggestions, please open an issue or contact me at [saketsourav3@gmail.com].
 
 Enjoy exploring the Earth in 3D!
