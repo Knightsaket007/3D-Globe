@@ -20,4 +20,19 @@ const mat=new THREE.MeshBasicMaterial({color:0xccff});
 const mesh=new THREE.Mesh(geometry,mat);
 scene.add(mesh);
 
-renderer.render(scene,camera);
+
+function animate(t=0){
+    console.log(t)
+
+    requestAnimationFrame(animate);
+    mesh.scale.setScalar(Math.cos(t*0.001)+1);
+    renderer.render(scene,camera);
+
+
+    // mesh.rotation.x=t/2000;
+    // mesh.rotation.y=t/1000;
+    // renderer.render(scene,camera);
+    // requestAnimationFrame(animate);
+  
+}
+animate()
