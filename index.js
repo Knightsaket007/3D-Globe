@@ -17,7 +17,7 @@ const scene = new THREE.Scene();
 const geometry = new THREE.IcosahedronGeometry(1.0, 3);
 const mat = new THREE.MeshStandardMaterial({
     color: 0xffffff,
-    flateShading: true,
+    flatShading: true,
 });
 
 const mesh = new THREE.Mesh(geometry, mat);
