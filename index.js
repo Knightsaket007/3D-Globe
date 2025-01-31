@@ -23,6 +23,12 @@ const mat = new THREE.MeshStandardMaterial({
 const mesh = new THREE.Mesh(geometry, mat);
 scene.add(mesh);
 
+const wireMat=new THREE.MeshBasicMaterial({color:0xffffff,wireframe:true});
+
+const wireMesh=new THREE.Mesh(geometry,wireMat);
+
+scene.add(wireMesh);
+
 const hemilight = new THREE.HemisphereLight(0xffffff, 0x000000);
 scene.add(hemilight);
 
@@ -30,6 +36,7 @@ function animate(t = 0) {
 
     requestAnimationFrame(animate);
     // mesh.scale.setScalar(Math.cos(t * 0.001) + 1);
+    mesh.rotation.y = t * 0.001;
     renderer.render(scene, camera);
 
 
