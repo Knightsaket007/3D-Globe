@@ -35,6 +35,7 @@ scene.add(hemilight);
 function animate(t = 0) {
 
     requestAnimationFrame(animate);
+    console.log('t=', t)
     // mesh.scale.setScalar(Math.cos(t * 0.001) + 1);
     mesh.rotation.y = t * 0.001;
     renderer.render(scene, camera);
