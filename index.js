@@ -14,7 +14,7 @@ const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
 camera.position.z = 2;
 const scene = new THREE.Scene();
 
-const geometry = new THREE.IcosahedronGeometry(1.0, 3);
+const geometry = new THREE.IcosahedronGeometry(1.0, 7);
 const mat = new THREE.MeshStandardMaterial({
     color: 0xffffff,
     flatShading: true,
@@ -26,7 +26,7 @@ scene.add(mesh);
 const wireMat=new THREE.MeshBasicMaterial({color:0xffffff,wireframe:true});
 
 const wireMesh=new THREE.Mesh(geometry,wireMat);
-
+wireMesh.scale.setScalar(1.001)
 mesh.add(wireMesh);
 
 const hemilight = new THREE.HemisphereLight(0xffffff, 0x000000);
@@ -37,7 +37,7 @@ function animate(t = 0) {
     requestAnimationFrame(animate);
     console.log('t=', t)
     // mesh.scale.setScalar(Math.cos(t * 0.001) + 1);
-    mesh.rotation.y = t * 0.001;
+    mesh.rotation.y = t * 0.0001;
     renderer.render(scene, camera);
 
 
