@@ -41,9 +41,9 @@ function animate(t = 0) {
 
     requestAnimationFrame(animate);
     console.log('t=', t)
-    // mesh.rotation.y = t * 0.0001;
+    mesh.rotation.y = t * 0.0001;
     renderer.render(scene, camera);
-controls.update()
+// controls.update()
 
     // mesh.rotation.x=t/2000;
     // mesh.rotation.y=t/1000;
