@@ -34,8 +34,8 @@ scene.add(hemilight);
 function animate(t = 0) {
 
     requestAnimationFrame(animate);
-   cube.rotation.x+=0.01;
-   cube.rotation.y+=0.02;
-renderer.render(scene,camera)
+    cube.rotation.x += 0.001;
+    cube.rotation.y += 0.002;
+    renderer.render(scene, camera)
 }
 animate()
