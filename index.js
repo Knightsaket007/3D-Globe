@@ -14,17 +14,19 @@ const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
 camera.position.z = 2;
 const scene = new THREE.Scene();
 
-const controls = new OrbitControls(camera, renderer.domElement);
-controls.enableDamping = true;
-controls.dampingFactor = 0.03;
+new OrbitControls(camera, renderer.domElement);
+// const controls = new OrbitControls(camera, renderer.domElement);
+// controls.enableDamping = true;
+// controls.dampingFactor = 0.03;
 
-const geometry = new THREE.BoxGeometry();
+const geometry = new THREE.IcosahedronGeometry(1, 1);
 const mat = new THREE.MeshStandardMaterial({
     color: 0xffffff,
+    flatShading:true,
 });
 
-const cube = new THREE.Mesh(geometry, mat);
-scene.add(cube);
+const earth = new THREE.Mesh(geometry, mat);
+scene.add(earth);
 
 
 const hemilight = new THREE.HemisphereLight(0x0099ff, 0xaa5500);
@@ -34,8 +36,8 @@ scene.add(hemilight);
 function animate(t = 0) {
 
     requestAnimationFrame(animate);
-    cube.rotation.x += 0.001;
-    cube.rotation.y += 0.002;
+    earth.rotation.x += 0.001;
+    earth.rotation.y += 0.002;
     renderer.render(scene, camera)
 }
 animate()
