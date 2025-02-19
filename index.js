@@ -19,7 +19,7 @@ new OrbitControls(camera, renderer.domElement);
 // controls.enableDamping = true;
 // controls.dampingFactor = 0.03;
 
-const geometry = new THREE.IcosahedronGeometry(1, 1);
+const geometry = new THREE.IcosahedronGeometry(1, 12);
 const mat = new THREE.MeshStandardMaterial({
     color: 0xffffff,
     flatShading:true,
