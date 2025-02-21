@@ -15,14 +15,13 @@ camera.position.z = 2;
 const scene = new THREE.Scene();
 
 new OrbitControls(camera, renderer.domElement);
-
 const loader=new THREE.TextureLoader();
 
 const geometry = new THREE.IcosahedronGeometry(1, 8);
 const mat = new THREE.MeshStandardMaterial({
     // color: 0xffffff,
     // flatShading:true,
-    map:new loader.load('/assests/textures/earthlights1k.jpg'),
+    map:new THREE.TextureLoader().load('/assests/textures/earthlights1k.jpg'),
 });
 
 const earth = new THREE.Mesh(geometry, mat);
