@@ -17,6 +17,7 @@ const scene = new THREE.Scene();
 const earthGroup=new THREE.Group();
 earthGroup.rotation.z=-23.4 *Math.PI/180;
 scene.add(earthGroup);
+
 new OrbitControls(camera, renderer.domElement);
 const loader=new THREE.TextureLoader();
 const geometry = new THREE.IcosahedronGeometry(1, 8);
@@ -37,7 +38,7 @@ scene.add(hemilight);
 function animate(t = 0) {
 
     requestAnimationFrame(animate);
-    earth.rotation.x += 0.001;
+    // earth.rotation.x += 0.001;
     earth.rotation.y += 0.002;
     renderer.render(scene, camera)
 }
