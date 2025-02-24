@@ -14,9 +14,11 @@ const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
 camera.position.z = 2;
 const scene = new THREE.Scene();
 
+const earthGroup=new THREE.Group();
+earthGroup.rotation.z=-23.4 *Math.PI/180;
+scene.add(earthGroup);
 new OrbitControls(camera, renderer.domElement);
 const loader=new THREE.TextureLoader();
-
 const geometry = new THREE.IcosahedronGeometry(1, 8);
 const mat = new THREE.MeshStandardMaterial({
     // color: 0xffffff,
@@ -25,7 +27,7 @@ const mat = new THREE.MeshStandardMaterial({
 });
 
 const earth = new THREE.Mesh(geometry, mat);
-scene.add(earth);
+earthGroup.add(earth);
 
 
 const hemilight = new THREE.HemisphereLight(0x0099ff, 0xaa5500);
