@@ -28,6 +28,7 @@ for(let i=0; i<numStars; i+=1){
     let p=randomSpherePoint();
     const {pos,hue}=p;
     positions.push(pos.x,pos.y,pos.z);
+    colors.push(col.r,col.g,col.b);
 }
 
 }
