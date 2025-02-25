@@ -18,4 +18,16 @@ function randomSpherePoint(radius) {
 
     };
 }
+
+
+const verts=[];
+const colors=[];
+const positions=[];
+let col;
+for(let i=0; i<numStars; i+=1){
+    let p=randomSpherePoint();
+    const {pos,hue}=p;
+    positions.push(pos.x,pos.y,pos.z);
+}
+
 }
