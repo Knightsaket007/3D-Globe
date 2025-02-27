@@ -12,7 +12,7 @@ function randomSpherePoint(radius) {
     let z=radius*Math.cos(phi);
 
     return {
-        position:new Three.Vector3(x,y,z),
+        pos:new Three.Vector3(x,y,z),
         hue:.6,
         minDistance:radius,
 
@@ -27,8 +27,20 @@ let col;
 for(let i=0; i<numStars; i+=1){
     let p=randomSpherePoint();
     const {pos,hue}=p;
-    positions.push(pos.x,pos.y,pos.z);
+    positions.push(p);
+    col=new Three.Color().setHSL(hue,.2,Math.random());
+    verts.push(pos.x,pos.y,pos.z);
     colors.push(col.r,col.g,col.b);
 }
+
+const geometry=new Three.BufferGeometry();
+geometry.addAttribute('position',new Three.Float32BufferAttribute(verts,3));
+geometry.addAttribute('color',new Three.Float32BufferAttribute(colors,3));
+
+const material=new Three.PointsMaterial({
+    size:.2,
+    vertexColors:true,
+    map:new Three.TextureLoader().load('assets/star.png'),
+});
 
 }

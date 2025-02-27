@@ -24,7 +24,8 @@ const geometry = new THREE.IcosahedronGeometry(1, 8);
 const mat = new THREE.MeshStandardMaterial({
     // color: 0xffffff,
     // flatShading:true,
-    map:loader.load('/assests/textures/earthlights1k.jpg'),
+    // map:loader.load('/assests/textures/earthlights1k.jpg'),
+    map:loader.load('/assests/textures/earthmap2k.jpg'),
 });
 
 const earth = new THREE.Mesh(geometry, mat);
