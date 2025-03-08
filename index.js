@@ -6,6 +6,7 @@ const height = window.innerHeight;
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(width, height);
 document.body.appendChild(renderer.domElement);
+console.log('renderer..', renderer.domElement)
 
 const fov = 75;
 const aspect = width / height;
@@ -48,7 +49,7 @@ function animate() {
 
     requestAnimationFrame(animate);
     // earth.rotation.x += 0.001;
-    earth.rotation.y += 0.002;
+    earth.rotation.y += 0.001;
     renderer.render(scene, camera)
 }
 animate()
