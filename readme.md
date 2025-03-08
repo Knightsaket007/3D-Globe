@@ -3,7 +3,7 @@
 Welcome to the Earth3D project! This project is a 3D globe visualization built using HTML and JavaScript.
 ## Project Status
 
-This project is currently in the building phase. Features and functionalities are being actively developed and may change frequently. Contributions and feedback are appreciated as we work towards the first stable release.
+completed
 ## Features
 
 - Interactive 3D globe
