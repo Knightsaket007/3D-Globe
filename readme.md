@@ -14,7 +14,7 @@ Completed
 
 - HTML
 - JavaScript
-- WebGL (via Three.js or similar library)
+- WebGL (via Three.js)
 
 ## Getting Started
 
